@@ -8,6 +8,7 @@ void Reverse(int matrix[3][3],int row, int start, int end){
     }
 }
 void optimalApproach(int matrix[3][3]){
+    cout<<"Optimal Approach:\n";
     int n = 3;
     for(int i = 0;i<n-1; i++){
         for(int j = i+1; j<n; j++){
