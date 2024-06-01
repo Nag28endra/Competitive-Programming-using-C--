@@ -1,2 +1,2 @@
-Better:8
-Optimal:8
+Print the element at particular row and column
+6
