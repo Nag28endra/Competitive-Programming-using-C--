@@ -1,2 +1,1 @@
-Print the element at particular row and column
-6
+1 5 10 10 5 1 
