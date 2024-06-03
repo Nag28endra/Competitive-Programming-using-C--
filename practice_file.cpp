@@ -1,54 +1,30 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-
-void optimalApproach(int A[],int B[], int s1, int s2){
-    int i = 0, j = 0;
-    vector<int> res;
-
-    cout<<"\nOptimal Approach: ";
-    while(i<s1 && j<s2){
-        if(A[i]<B[j])i++;
-        else if(A[i]>B[j])j++;
-
-        else{
-            res.emplace_back(A[i]);
-            i++;
-            j++;
+int optimal(vector<int> &arr, int n){
+    int Sum = 0;
+    int maxSum = INT_MIN;
+    for(const auto &i:arr){
+        Sum +=i;
+        maxSum = max(Sum,maxSum);
+        if(Sum<0){
+            Sum = 0;
         }
     }
-    for(auto i:res)cout<<i<<" ";
+    return maxSum;
+}
+
+void brute(vector<int> &arr, int n, int k){
     
 }
+int main() {
+    vector<int> arr;
+    int input;
 
-void bruteApproach(int A[],int B[], int s1, int s2){
-       int visited[s2]={0};
-       vector<int> res;
-
-        cout<<"Brute Approach: ";
-       for(int i = 0;i<s1;i++){
-        for(int j = 0; j<s2; j++){
-            if(A[i]==B[j] && visited[j]==0){
-                visited[j]=1;
-                res.push_back(A[i]);
-                break;
-            }
-            if(A[i]<B[j])break;
-        }
-       }
-       for(auto i:res)cout<<i<<" ";
-}
-
-   
-int main(){
-    int s1,s2;
-    cin>>s1>>s2;
-    int A[s1],B[s2];
-
-    for(int i = 0; i<s1; i++)cin>>A[i];
-    for(int j = 0; j<s2; j++)cin>>B[j];
-
-    bruteApproach(A,B,s1,s2);
-    optimalApproach(A,B,s1,s2);
+    while(cin>>input && input!=EOF)arr.push_back(input);
+    // brute(arr,arr.size(),15);
+    
+    cout<<"\noptimal:"<<optimal(arr,arr.size());
     return 0;
+    
 }

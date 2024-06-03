@@ -57,7 +57,7 @@ int main()
     
     for (int i = 0; i<s1; i++)cin>>arr1[i];
     for (int i = 0 ; i<s2; i++)cin>>arr2[i];
-    
+                
     // Union_Brute(arr1,arr2,s1,s2);
     Union_Optimal(arr1,arr2,s1,s2);
     return 0;
