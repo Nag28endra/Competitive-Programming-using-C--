@@ -15,6 +15,19 @@ bool binarySearch(vector<int> arr, int target){
     }
     return false;
 }
+bool optimal2(vector<vector<int>> matrix, int target){
+    int n = matrix.size();
+    int m = matrix[0].size();
+
+    int row = 0;
+    int col= m - 1;
+    while(row<n && col>=0){
+        if(matrix[row][col]==target) true;
+        else if (matrix[row][col]>target) col--;
+        else row++;
+    }
+    return false;
+}
 bool optimal(vector<vector<int>> matrix, int target){
     /*
         time complexity: O(log(n*m))
@@ -72,6 +85,7 @@ int main()
     cout<<"brute: "<<brute(matrix,3);
     cout<<"\nbetter: "<<better(matrix,3);
     cout<<"\noptimal: "<<optimal(matrix,3);
+    // cout<<"\noptimal2: "<<optimal2(matrix,3);
 
     return 0;
 }
