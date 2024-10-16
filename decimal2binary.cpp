@@ -2,6 +2,10 @@
 using namespace std;
 
 string toBinary(int data) {
+    /*
+        Time complexity: O(log N)
+        Space complexity: O(log N)
+    */
     if (data == 0) return "0"; // Handle the case for data = 0
     string s = "";
     while (data > 0) {

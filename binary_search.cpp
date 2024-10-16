@@ -68,8 +68,8 @@ int main()
 
     while(cin>>input)arr.push_back(input);
 
-    cout<<"binary search: "<<binarySearch(arr,arr.size(),3);
-    cout<<"\nLower bound: "<<lowerBound(arr,arr.size(),3);
-    cout<<"\nUpper bound: "<<upperBound(arr,arr.size(),3);
+    cout<<"binary search: "<<binarySearch(arr,arr.size(),7);
+    cout<<"\nLower bound: "<<lowerBound(arr,arr.size(),7);
+    cout<<"\nUpper bound: "<<upperBound(arr,arr.size(),7);
     return 0;
 }
